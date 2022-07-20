@@ -32,9 +32,8 @@ class _SpellCheckerState extends State<SpellChecker> {
           ),
           ElevatedButton.icon(
             onPressed: () async {
-              var errors = await tool.check(_spellController.text);
+              errors = await tool.check(_spellController.text);
               errors.forEach((element) {
-                errors.add(element);
                 print(errors);
                 setState(() {});
               });
